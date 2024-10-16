@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  main:
+    image: terraformwithvolumetest
+    network_mode: host
+    working_dir: /infrastructure
+    entrypoint: ["sh", "-c"]
+    command: ["terraform init && terraform validate && terraform apply -auto-approve"]

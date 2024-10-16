@@ -1,0 +1,12 @@
+FROM hashicorp/terraform:1.5.0 AS config_only
+
+# Install required packages
+
+# Setup additional tools
+
+# Other configuration
+
+FROM config_only AS copy_files
+
+# Copy app repo
+COPY ./../terraform /infrastructure
